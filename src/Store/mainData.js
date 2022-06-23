@@ -65,11 +65,82 @@ export const data = {
     class:{
         classCount:0,
         classIDCounter:0,
-        array:[]
+        array:[
+            {
+                id:0,
+                name: "0.Ders",
+                akts:0,
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et eros nec enim ornare efficitur eget vitae diam. Pellentesque erat odio, porta sit amet aliquam at, lacinia at nunc. Nam porta interdum mattis. Etiam vitae placerat velit. Curabitur erat justo, facilisis ut libero a, scelerisque elementum velit. Nulla venenatis commodo.",
+                pdf:null,
+                teachers:[],
+            },{
+                id:1,
+                name: "1.Ders",
+                akts:0,
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et eros nec enim ornare efficitur eget vitae diam. Pellentesque erat odio, porta sit amet aliquam at, lacinia at nunc. Nam porta interdum mattis. Etiam vitae placerat velit. Curabitur erat justo, facilisis ut libero a, scelerisque elementum velit. Nulla venenatis commodo.",
+                pdf:null,
+                teachers:[],
+            },{
+                id:2,
+                name: "2.Ders",
+                akts:0,
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et eros nec enim ornare efficitur eget vitae diam. Pellentesque erat odio, porta sit amet aliquam at, lacinia at nunc. Nam porta interdum mattis. Etiam vitae placerat velit. Curabitur erat justo, facilisis ut libero a, scelerisque elementum velit. Nulla venenatis commodo.",
+                pdf:null,
+                teachers:[],
+            },{
+                id:3,
+                name: "asd",
+                akts:0,
+                description: "",
+                pdf:null,
+                teachers:[],
+            },{
+                id:4,
+                name: "asd",
+                akts:0,
+                description: "",
+                pdf:null,
+                teachers:[],
+            }
+        ]
     },
     assignment:{
         assignmentCount:0,
-        array: []
+        array: [
+            {
+                classId:0,
+                studentId:0,
+            },{
+                classId:1,
+                studentId:0,
+            },{
+                classId:2,
+                studentId:0,
+            },
+            {
+                classId:3,
+                studentId:0,
+            },
+            {
+                classId:4,
+                studentId:0,
+            }
+        ]
+    },
+    pdf:{
+        pdfCount:1,
+        array:[
+            {
+                id:0,
+                classID:0,
+                name:"",
+                downloadCount:0,
+                url:["./pdfs/1.pdf",
+                    "./pdfs/2.pdf",
+                    "./pdfs/3.pdf"
+                ],
+            }
+        ]
     }
 }
 
@@ -94,4 +165,15 @@ export const initialClass = {
     description: "",
     pdf:null,
     teachers:[],
+}
+export const initialPDF = {
+    id:0,
+    classID:-1,
+    name:"",
+    downloadCount:0,
+    url:[],
+}
+export const initialAssignment = {
+    classId:-1,
+    studentId:-1,
 }

@@ -60,7 +60,7 @@ const authSlice = createSlice({
             }
         },
         createNewTeacher(){
-            //TODO: Belki eklenebilir
+    
             },
         // Bir ogretmenin sisteme ogrenci eklemek islemini yaptiginda cagirilan reducer.
         createNewStudent(state, action){

@@ -40,7 +40,6 @@ const AddClass = (props) => {
     const teacherFilterFunction = (teacher) => {
         // Filtrelemek icin bir girdi yoksa butun hepsi gozukmesi icin.
         if (teacherName === "") return true;
-        // Eger ki ogretmen daha once secilmisse eklenmeyecek.
         // Ogretmenin adi filtrelemeye uyuyorsa eklenecek.
         if (teacher.name.includes(teacherName)) return true;
         // Hicbiri degilse eklenmiyor.
@@ -49,6 +48,7 @@ const AddClass = (props) => {
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
+        //refreshlenmesini onluyor.
         let tempClass = {...initialClass};
         tempClass.id = classCount;
         tempClass.name = className;
@@ -61,11 +61,11 @@ const AddClass = (props) => {
     return(
         <div className="add-class-page"
              onClick={(event)=>{
-            props.classFlag(false);
+            props.classFlag(false);//griye basildiginde kapanmasini saglar.
         }}>
             <div className="class-card-container"
                  onClick={(event)=>{
-                     event.stopPropagation();
+                     event.stopPropagation(); //beyaza tiklandiginde kapanmamasini saglar onclick cagirilmaz.
                  }}>
                 <Card>
                     <CardTitle tag={"h1"}>

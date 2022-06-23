@@ -15,12 +15,12 @@ const SelectStudent = (props) => {
                         props.setFilter(event.target.value);
                     }}></Input>
              <div className={"student-grid-container"}>
-                 <Container>
+                 <Container> 
                      <Row>
                          {props.students.filter(x=>props.studentFilterFunction(x)).
                          map((x, index) =>{
                              return (
-                                 <Col lg={4} md={6} sm={12}
+                                 <Col lg={4} md={6} sm={12} //react strapten geliyor. her bir cardin alanini belirtir. 
                                       key={x.name + " " + index}>
                                     <StudentCard x={x} setSelectedStudent={props.setSelectedStudent}/>
                                  </Col>);

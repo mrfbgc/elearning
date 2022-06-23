@@ -17,7 +17,7 @@ const MainPage = (props) => {
     if (auth.isLoggedIn){
         navigate("/"+auth.userTitle);
 
-    }
+    } //kullanicigiya göre giris sayfasina yollanıyor.
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

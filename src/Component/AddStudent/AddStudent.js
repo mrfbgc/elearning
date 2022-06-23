@@ -15,7 +15,8 @@ const AddStudent = (props) => {
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
     const onStudentCreateHandler = () =>{
-
+        
+        //valid mi kontrol ediliyor.
         let emailParse = email.split("@")[1].split(".");
         if (emailParse[0] === "ogr"){
             dispatch(authActions.createNewStudent({
@@ -24,6 +25,7 @@ const AddStudent = (props) => {
                     email:email,
                     password:password
             }));
+            //alan bosaltimini saglar.
             setName("");
             setSurname("");
             setEmail("");

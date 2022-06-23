@@ -7,7 +7,7 @@ const SecretLayer = ()=>{
     const navigate = useNavigate();
 
     if (!auth.isLoggedIn)
-        navigate("/login");
+        navigate("/");
 }
 
 export default SecretLayer;

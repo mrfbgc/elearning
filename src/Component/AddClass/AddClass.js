@@ -23,7 +23,7 @@ const AddClass = (props) => {
     const [classAKTS, setAKTS] = useState(0);
 
     const addTeacherToList = (id) => {
-        let tempList = [...selectedTeacherIds]; //kopyalamayı sağlıyor bu yazım
+        let tempList = [...selectedTeacherIds]; //kopyalamayi sagliyor bu yazim
         tempList.push(id);
         setSelectedTeacherIds(tempList);
         console.log(id);
@@ -49,7 +49,6 @@ const AddClass = (props) => {
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        //TODO: PDF ekleme
         let tempClass = {...initialClass};
         tempClass.id = classCount;
         tempClass.name = className;
